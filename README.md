@@ -32,34 +32,24 @@ WMS/
 ├── .gitignore # Ignored files (e.g., large CSV)
 ├── README.md # You're here!
 
-bash
-Copy
-Edit
-
 ## 🧪 Getting Started
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/russzw/WMS.git
 cd WMS
-2. Install Dependencies
-bash
-Copy
-Edit
+
+## 2. Install Dependencies
 npm install
-3. Environment Variables
+
+## 3. Environment Variables
 Create a .env.local file with your Adafruit IO credentials:
 
-ini
-Copy
-Edit
 ADAFRUIT_IO_KEY=your_adafruit_io_key
 ADAFRUIT_IO_USERNAME=your_username
-4. Run the Development Server
-bash
-Copy
-Edit
+
+## 4. Run the Development Server
+
 npm run dev
 Open http://localhost:3000 to view in your browser.
 
