@@ -1,0 +1,18 @@
+.container {
+  height: 70vh; /* Set the container to 100% of the viewport height */
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 200;
+  color: var(--textSoft);
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  flex-grow: 1; /* Allow the chart container to grow and fill remaining space */
+}

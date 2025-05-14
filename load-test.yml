@@ -1,0 +1,29 @@
+config:
+  target: 'http://localhost:3000' # The URL of your running Next.js app in dev mode
+  phases:
+    - duration: 60  # Warm up the API phase
+      arrivalRate: 2  # Start with 5 new virtual users added per second
+      rampTo: 5  # Ramp up to 10 new virtual users per second
+      name: Warm up the API
+
+    - duration: 60  # Ramp up to peak load phase
+      arrivalRate: 5  # Start with 10 new virtual users added per second
+      rampTo: 10  # Ramp up to 15 new virtual users per second
+      name: Ramp up to peak load
+
+    - duration: 300  # Sustained peak load phase
+      arrivalRate: 10  # Maintain 50 new virtual users per second
+      name: Sustained peak load
+
+  # Configure metrics collection for increased precision
+  defaults:
+    headers:
+      User-Agent: "Artillery Load Test"
+
+scenarios:
+  - flow:
+      - get:
+          url: "/login" # The route you want to test
+      - think: 2  # Simulate a 2-second think time between requests
+      - get:
+          url: "/dashboard"  # Optionally, add more routes to test different parts of your application
