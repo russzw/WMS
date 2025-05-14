@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WMS - Waste Management System ♻️
 
-## Getting Started
+A full-stack, cloud-integrated dashboard that visualizes and monitors waste levels in smart bins using Adafruit IO and Recharts. Developed as a capstone project to demonstrate skills in IoT, cloud computing, and modern web development.
 
-First, run the development server:
+## 🚀 Features
+
+- 📊 Real-time visualization of sensor data from smart bins
+- ☁️ Integration with Adafruit IO for IoT data streaming
+- 📉 Interactive Recharts graphs for tracking waste levels
+- 🧠 Built using Next.js 14 with Server Actions and dynamic imports
+- 🔐 Secure API route handling
+- 🖥️ Responsive and accessible UI
+- 🗂️ Modular architecture for scalability and maintenance
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (via Next.js 14), Tailwind CSS
+- **Backend:** Next.js API Routes, Server Actions
+- **IoT Platform:** Adafruit IO
+- **Visualization:** Recharts
+- **Deployment:** Vercel / Node.js environment
+
+## 📂 Project Structure
+
+WMS/
+├── app/ # Next.js 14 App directory (Routing, Server Components)
+├── components/ # Reusable UI components
+├── lib/ # Utility and helper functions
+├── pages/ # API routes
+├── public/ # Static assets (e.g., placeholder CSV)
+├── styles/ # Global styles
+├── .gitignore # Ignored files (e.g., large CSV)
+├── README.md # You're here!
+
+bash
+Copy
+Edit
+
+## 🧪 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/russzw/WMS.git
+cd WMS
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Environment Variables
+Create a .env.local file with your Adafruit IO credentials:
+
+ini
+Copy
+Edit
+ADAFRUIT_IO_KEY=your_adafruit_io_key
+ADAFRUIT_IO_USERNAME=your_username
+4. Run the Development Server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to view in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📡 Adafruit IO Setup
+Sign up or log into Adafruit IO.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create feeds for bin1, bin2, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Send sample data using MQTT, HTTP, or dashboards.
 
-## Learn More
+📊 Graphs and Visuals
+This project uses Recharts to render:
 
-To learn more about Next.js, take a look at the following resources:
+Real-time line charts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Bar charts for daily averages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Status indicators for waste thresholds
 
-## Deploy on Vercel
+⚠️ Notes
+A large CSV file in the public/ directory is ignored via .gitignore for performance reasons.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ensure your Adafruit IO feed data matches the naming conventions used in the code (bin1, bin2, etc).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+✅ To Do
+ Add user authentication
+
+ Add notifications when bin is full
+
+ Export data for city analytics
+
+🤝 Contributing
+Feel free to fork the repo, create a branch, and submit pull requests.
+
+📝 License
+This project is licensed under the MIT License.
+
+Capstone project submitted for Cloud Computing and IoT degree at UZ.
