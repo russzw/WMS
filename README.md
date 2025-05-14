@@ -7,6 +7,7 @@ A full-stack, cloud-integrated dashboard that visualizes and monitors waste leve
 - 📊 Real-time visualization of sensor data from smart bins
 - ☁️ Integration with Adafruit IO for IoT data streaming
 - 📉 Interactive Recharts graphs for tracking waste levels
+- 🌐 MongoDB Atlas for cloud-based data persistence
 - 🧠 Built using Next.js 14 with Server Actions and dynamic imports
 - 🔐 Secure API route handling
 - 🖥️ Responsive and accessible UI
@@ -16,6 +17,7 @@ A full-stack, cloud-integrated dashboard that visualizes and monitors waste leve
 
 - **Frontend:** React (via Next.js 14), Tailwind CSS
 - **Backend:** Next.js API Routes, Server Actions
+- **Database:** MongoDB Atlas (Cloud MongoDB)
 - **IoT Platform:** Adafruit IO
 - **Visualization:** Recharts
 - **Deployment:** Vercel / Node.js environment
