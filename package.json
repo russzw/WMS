@@ -27,7 +27,7 @@
     "formidable": "^3.5.4",
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
-    "mongodb": "^6.7.0",
+    "mongodb": "^6.17.0",
     "mongodb-memory-server": "^9.2.0",
     "mongoose": "^8.9.5",
     "next": "15.2.2",
